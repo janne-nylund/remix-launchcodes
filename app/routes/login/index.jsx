@@ -157,7 +157,7 @@ const Login = () => {
               {actionData?.fieldErrors ? <div className="error">{actionData.fieldErrors.email}</div> : null}
             </div>
           }
-          <button className="btn-send" name="_action" value={actionData?.fields?.formType === 'register' ? 'register' : 'login'}>{actionData?.fields?.formType === 'register' ? 'REGISTER' : 'LOGIN'}</button>
+          <button className="btn-send" name="_action" value={actionData?.fields?.formType === 'register' ? 'register' : 'login'}>{actionData?.fields?.formType === 'register' ? 'REGISTER' : isAdding ? 'PROCESSING' : 'LOGIN'}</button>
         </Form>
       </div>
       <div className="form-data-header">STATE MACHINE WITH FORMDATA</div>
