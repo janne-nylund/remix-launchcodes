@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;900&display=swap');
+
+body {
+  font-family: 'Poppins';
+  background-color: #0093E9;
+  background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+  width: 100vw;
+  height: 100vh;
+}
+h1 {
+  margin: 0;
+  font-size: 5rem;
+  color: whitesmoke;
+}
+
+h2 {
+  margin-top: 50px;
+  margin-bottom: 20px;
+  font-size: 4.3rem;
+  color: whitesmoke;
+}
+
+h3 {
+  margin-top: 20px;
+}
+
+.content {
+  width: 400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.formContainer {
+  margin: 0 auto;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background-color: whitesmoke;
+  width: 400px;
+  border-radius: 10px;
+  padding: 30px;
+}
+
+.formSwitch {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.form-controller {
+  display: flex;
+  flex-direction: column;
+}
+
+.index-form {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+  flex-direction: column;
+}
+
+label {
+  display: block;
+}
+
+input {
+  width: 90%; 
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 3px;
+  border: 1px solid #d1d1d1;
+  outline: none;
+}
+
+.btn-send {
+  border: 0;
+  margin-top: 10px;
+  background-color: #01659f;
+  padding: 10px;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  font-size: small;
+  width: 6rem;
+  cursor: pointer;
+}
+
+.btn-send:hover {
+  background-color: #015281;
+  cursor: pointer;
+}
+
+.btn-switch {
+  border: 0;
+  background-color: #0093E9;
+  padding: 10px;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  font-size: small;
+  width: 6rem;
+  cursor: pointer;
+}
+
+.btn-switch:hover {
+  background-color: #015281;
+  cursor: pointer;
+}
+
+.btn-view {
+  margin: 0 auto;
+  border: 0;
+  margin-top: 10px;
+  background-color: #0093E9;
+  padding: 20px;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  font-size: 1.15rem;
+  width: 100%;
+  cursor: pointer;
+}
+
+.btn-view:hover {
+  background-color: #007cc3;
+  cursor: pointer;
+}
+
+.btn-back {
+  margin: 0 auto;
+  border: 0;
+  margin-top: 40px;
+  background-color: #0093E9;
+  padding: 20px;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  font-size: 1.15rem;
+  width: 100%;
+  cursor: pointer;
+}
+
+.btn-back:hover {
+  background-color: #007cc3;
+  cursor: pointer;
+}
+
+.error {
+  color: darkred;
+}
+
+.form-data {
+  margin-top: 50px;
+  font-size: small;
+}
+
+.rocket {
+  margin: 0 auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  width: 200px;
+}
