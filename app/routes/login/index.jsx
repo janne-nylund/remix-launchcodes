@@ -160,6 +160,7 @@ const Login = () => {
           <button className="btn-send" name="_action" value={actionData?.fields?.formType === 'register' ? 'register' : 'login'}>{actionData?.fields?.formType === 'register' ? 'REGISTER' : isAdding ? 'PROCESSING' : 'LOGIN'}</button>
         </Form>
       </div>
+      {isAdding && <div>PENDING</div>}
       <div className="form-data-header">STATE MACHINE WITH FORMDATA</div>
       <div className="form-data-info">JSON.stringify() to show form state</div>
       <div className="form-data">{actionData?.formType || actionData?.fieldsErrors || actionData?.fields ? JSON.stringify(actionData) : <>&nbsp;</>}</div>
