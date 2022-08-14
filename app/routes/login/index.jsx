@@ -90,7 +90,7 @@ const Login = () => {
   let isAdding = transition.state === "submitting" &&
     (transition.submission.formData.get("_action") === 'log' || transition.submission.formData.get("_action") === 'reg')
 
-  let isPending = transition.state === "submitting" &&
+  let isPending = (transition.state === "submitting" || transition.state === "loading") &&
     (transition.submission.formData.get("_action") === 'login' || transition.submission.formData.get("_action") === 'register')
 
   // clear form after submission and when checking if formErrors "are gone"
