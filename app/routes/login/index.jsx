@@ -90,6 +90,9 @@ const Login = () => {
   let isAdding = transition.state === "submitting" &&
     (transition.submission.formData.get("_action") === 'log' || transition.submission.formData.get("_action") === 'reg')
 
+  let isPending = transition.state === "submitting" &&
+    (transition.submission.formData.get("_action") === 'login' || transition.submission.formData.get("_action") === 'register')
+
   // clear form after submission and when checking if formErrors "are gone"
   useEffect(() => {
     formRef.current?.reset()
@@ -157,10 +160,9 @@ const Login = () => {
               {actionData?.fieldErrors ? <div className="error">{actionData.fieldErrors.email}</div> : null}
             </div>
           }
-          <button className="btn-send" name="_action" value={actionData?.fields?.formType === 'register' ? 'register' : 'login'}>{actionData?.fields?.formType === 'register' ? 'REGISTER' : isAdding ? 'PROCESSING' : 'LOGIN'}</button>
+          <button className="btn-send" name="_action" value={actionData?.fields?.formType === 'register' ? 'register' : 'login'}>{actionData?.fields?.formType === 'register' ? 'REGISTER' : isPending ? 'PROCESSING' : 'LOGIN'}</button>
         </Form>
       </div>
-      {isAdding && <div>PENDING</div>}
       <div className="form-data-header">STATE MACHINE WITH FORMDATA</div>
       <div className="form-data-info">JSON.stringify() to show form state</div>
       <div className="form-data">{actionData?.formType || actionData?.fieldsErrors || actionData?.fields ? JSON.stringify(actionData) : <>&nbsp;</>}</div>
